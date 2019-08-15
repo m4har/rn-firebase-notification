@@ -35,7 +35,7 @@ class Notification extends React.Component {
             // .setSubtitle(notification.subtitle)
             .setBody(body)
             .setData(data)
-            .android.setBigPicture(data.image)
+            // .android.setBigPicture(data.image)
             .android.setChannelId(channel.channelId) // e.g. the id you chose above
             // .android.setSmallIcon('@mipmap/ic_stat_paninbank_app_icon') // create this icon in Android Studio
             .android.setColor('#000000'); // you can set a color here

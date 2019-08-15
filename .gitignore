@@ -43,7 +43,7 @@ google-services.json
 # BUCK
 buck-out/
 \.buckd/
-*.keystore
+# *.keystore
 
 # fastlane
 #
