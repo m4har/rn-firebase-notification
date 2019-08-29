@@ -6,46 +6,38 @@
  * @flow
  */
 
-import React, { Fragment } from 'react';
+import React, { Fragment } from 'react'
 import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
   View,
   Text,
-  StatusBar,
-} from 'react-native';
+  StatusBar
+} from 'react-native'
 
 import {
   Header,
   LearnMoreLinks,
   Colors,
   DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import firebase from 'react-native-firebase';
-import Notification from '../services/Notification';
+  ReloadInstructions
+} from 'react-native/Libraries/NewAppScreen'
+import firebase from 'react-native-firebase'
+import Notification from '../services/Notification'
 
 class App extends React.Component {
-  componentDidMount() {
-    this.getToken();
+  componentDidMount () {
   }
-  async getToken() {
-    try {
-      const fcmToken = await firebase.messaging().getToken();
-      console.log(fcmToken);
-    } catch (error) {
-      console.warn(error);
-    }
-  }
-  render() {
+
+  render () {
     return (
       <Fragment>
-        <Notification navigation={this.props.navigation}/>
-        <StatusBar barStyle="dark-content" />
+        <Notification navigation={this.props.navigation} />
+        <StatusBar barStyle='dark-content' />
         <SafeAreaView>
           <ScrollView
-            contentInsetAdjustmentBehavior="automatic"
+            contentInsetAdjustmentBehavior='automatic'
             style={styles.scrollView}
           >
             <Header />
@@ -85,35 +77,35 @@ class App extends React.Component {
           </ScrollView>
         </SafeAreaView>
       </Fragment>
-    );
+    )
   }
 }
 
 const styles = StyleSheet.create({
   scrollView: {
-    backgroundColor: Colors.lighter,
+    backgroundColor: Colors.lighter
   },
   engine: {
     position: 'absolute',
-    right: 0,
+    right: 0
   },
   body: {
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.white
   },
   sectionContainer: {
     marginTop: 32,
-    paddingHorizontal: 24,
+    paddingHorizontal: 24
   },
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
-    color: Colors.black,
+    color: Colors.black
   },
   sectionDescription: {
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
-    color: Colors.dark,
+    color: Colors.dark
   },
   highlight: {
     fontWeight: '700'
@@ -125,7 +117,7 @@ const styles = StyleSheet.create({
     padding: 4,
     paddingRight: 12,
     textAlign: 'right'
-  },
-});
+  }
+})
 
-export default App;
+export default App
